@@ -38,7 +38,7 @@ const cartItemClickListener = () => {
     const totalPrice = parseFloat(myTotalPrice.innerText);
     const removedItemInnerText = event.target.innerText;
     const removedItemPrice = parseFloat(removedItemInnerText.split('$')[1]);
-    myTotalPrice.innerText = (totalPrice - removedItemPrice);
+    myTotalPrice.innerText = (Math.round(totalPrice * 100 - removedItemPrice * 100) / 100);
     event.target.remove();
     localStorage.setItem('myCartList', olCartList.innerHTML);
     localStorage.setItem('totalPrice', myTotalPrice.innerText);
@@ -83,7 +83,7 @@ const increaseTotalPrice = () => {
   const addedItemInnerText = olCartList.lastChild.innerText;
   const addedItemPrice = parseFloat(addedItemInnerText.split('$')[1]);
 
-  myTotalPrice.innerText = (totalPrice + addedItemPrice);
+  myTotalPrice.innerText = (Math.round(totalPrice * 100 + addedItemPrice * 100) / 100);
 };
 
 const addToCart = () => {

@@ -5,9 +5,9 @@
     "passes": 8,
     "pending": 0,
     "failures": 0,
-    "start": "2021-08-16T18:35:59.732Z",
-    "end": "2021-08-16T18:36:15.977Z",
-    "duration": 16245,
+    "start": "2021-08-17T15:39:59.053Z",
+    "end": "2021-08-17T15:40:15.578Z",
+    "duration": 16525,
     "testsRegistered": 8,
     "passPercent": 100,
     "pendingPercent": 0,
@@ -18,7 +18,7 @@
   },
   "results": [
     {
-      "uuid": "8eb4a305-fac4-42cd-8766-f33d041eedd4",
+      "uuid": "82a66315-05df-4ffd-8afb-a33400798409",
       "title": "",
       "fullFile": "cypress/integration/project.spec.js",
       "file": "cypress/integration/project.spec.js",
@@ -27,7 +27,7 @@
       "tests": [],
       "suites": [
         {
-          "uuid": "1501fab1-5519-465d-8cf2-210f18f4b547",
+          "uuid": "2559da36-f3c4-4e12-8801-036c6a2e7530",
           "title": "Shopping Cart Project",
           "fullFile": "",
           "file": "",
@@ -36,7 +36,7 @@
           "tests": [],
           "suites": [
             {
-              "uuid": "dbbfb3b4-93d4-4faa-8d61-471ccd05fd56",
+              "uuid": "b63f942d-d2b4-46da-b975-52a2d6f797bd",
               "title": "1 - Crie uma listagem de produtos",
               "fullFile": "",
               "file": "",
@@ -47,7 +47,7 @@
                   "title": "Listagem de produtos",
                   "fullTitle": "Shopping Cart Project 1 - Crie uma listagem de produtos Listagem de produtos",
                   "timedOut": null,
-                  "duration": 387,
+                  "duration": 805,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -56,26 +56,26 @@
                   "context": null,
                   "code": "cy.get(ITEM_SELECTOR).should('exist').should('have.length', results.length);",
                   "err": {},
-                  "uuid": "40273f1f-d43a-476c-b96d-b6ce0719c7bc",
-                  "parentUUID": "dbbfb3b4-93d4-4faa-8d61-471ccd05fd56",
+                  "uuid": "bbf3ab5a-d3a9-41ff-a0a1-77733e462724",
+                  "parentUUID": "b63f942d-d2b4-46da-b975-52a2d6f797bd",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "40273f1f-d43a-476c-b96d-b6ce0719c7bc"
+                "bbf3ab5a-d3a9-41ff-a0a1-77733e462724"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 387,
+              "duration": 805,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "b3310512-e93e-41e2-8fe9-0553bd9744bf",
+              "uuid": "cab3d6ab-07f6-4763-8a61-616a98144bc1",
               "title": "2 - Adicione o produto ao carrinho de compras",
               "fullFile": "",
               "file": "",
@@ -86,7 +86,7 @@
                   "title": "Adicione o produto ao carrinho de compras",
                   "fullTitle": "Shopping Cart Project 2 - Adicione o produto ao carrinho de compras Adicione o produto ao carrinho de compras",
                   "timedOut": null,
-                  "duration": 1477,
+                  "duration": 1286,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -95,26 +95,26 @@
                   "context": null,
                   "code": "cy.wait(1000);\naddToCart(36);\ncountCart(1);\nconsole.log(results[36].id, results[36].title);\ncy.get(CART_ITEMS).children().first().should('have.text', \"SKU: \".concat(results[36].id, \" | NAME: \").concat(results[36].title, \" | PRICE: $\").concat(results[36].price));",
                   "err": {},
-                  "uuid": "4b5d058b-2f6e-41f8-b3e2-d9e13fcd9d56",
-                  "parentUUID": "b3310512-e93e-41e2-8fe9-0553bd9744bf",
+                  "uuid": "fa99b349-1e47-47fd-b76c-ac40b217cc73",
+                  "parentUUID": "cab3d6ab-07f6-4763-8a61-616a98144bc1",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "4b5d058b-2f6e-41f8-b3e2-d9e13fcd9d56"
+                "fa99b349-1e47-47fd-b76c-ac40b217cc73"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 1477,
+              "duration": 1286,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "dfd953f6-cce8-4b9d-b480-05db9c87fa5e",
+              "uuid": "30b53790-2563-4562-9c84-d03ed95ea76f",
               "title": "3 - Remova o item do carrinho de compras ao clicar nele",
               "fullFile": "",
               "file": "",
@@ -125,7 +125,7 @@
                   "title": "Remova o item do carrinho de compras ao clicar nele",
                   "fullTitle": "Shopping Cart Project 3 - Remova o item do carrinho de compras ao clicar nele Remova o item do carrinho de compras ao clicar nele",
                   "timedOut": null,
-                  "duration": 786,
+                  "duration": 806,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -134,26 +134,26 @@
                   "context": null,
                   "code": "addToCart(29);\naddToCart(31);\naddToCart(15);\ncy.get(CART_ITEMS).children().eq(1).click();\ncountCart(2);\ncy.get(CART_ITEMS).children().eq(1).click();\ncountCart(1);\ncy.get(CART_ITEMS).children().eq(0).click();\ncountCart(0);",
                   "err": {},
-                  "uuid": "97b4d33c-0e8e-40d1-9ba0-561319692726",
-                  "parentUUID": "dfd953f6-cce8-4b9d-b480-05db9c87fa5e",
+                  "uuid": "31997ebf-c3c5-4814-9f47-8efabdd2c996",
+                  "parentUUID": "30b53790-2563-4562-9c84-d03ed95ea76f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "97b4d33c-0e8e-40d1-9ba0-561319692726"
+                "31997ebf-c3c5-4814-9f47-8efabdd2c996"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 786,
+              "duration": 806,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "e2fbbdd9-95e9-4e6c-afd1-f9540e1a345b",
+              "uuid": "6ebbd1d8-eb9c-461f-9b4a-3aebf2e75994",
               "title": "4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
               "fullFile": "",
               "file": "",
@@ -164,7 +164,7 @@
                   "title": "Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
                   "fullTitle": "Shopping Cart Project 4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página",
                   "timedOut": null,
-                  "duration": 2688,
+                  "duration": 2766,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -173,8 +173,8 @@
                   "context": null,
                   "code": "var first = 36;\nvar last = 29;\naddToCart(first);\ncy.wait(1000);\ncountCart(1);\ncy.get(CART_ITEMS).children().first().should('have.text', \"SKU: \".concat(results[first].id, \" | NAME: \").concat(results[first].title, \" | PRICE: $\").concat(results[first].price));\naddToCart(last);\ncy.wait(1000);\ncy.get(CART_ITEMS).children().last().should('have.text', \"SKU: \".concat(results[last].id, \" | NAME: \").concat(results[last].title, \" | PRICE: $\").concat(results[last].price));\ncy.reload({\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get(CART_ITEMS).children().first().should('have.text', \"SKU: \".concat(results[first].id, \" | NAME: \").concat(results[first].title, \" | PRICE: $\").concat(results[first].price));\ncy.get(CART_ITEMS).children().last().should('have.text', \"SKU: \".concat(results[last].id, \" | NAME: \").concat(results[last].title, \" | PRICE: $\").concat(results[last].price));",
                   "err": {},
-                  "uuid": "0bc3b8e8-e660-4790-8d3b-1a3d57e4f523",
-                  "parentUUID": "e2fbbdd9-95e9-4e6c-afd1-f9540e1a345b",
+                  "uuid": "2f23ce52-4620-4013-a4bc-6e1f9578871a",
+                  "parentUUID": "6ebbd1d8-eb9c-461f-9b4a-3aebf2e75994",
                   "isHook": false,
                   "skipped": false
                 },
@@ -182,7 +182,7 @@
                   "title": "Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após regarregar a página",
                   "fullTitle": "Shopping Cart Project 4 - Carregue o carrinho de compras através do **LocalStorage** ao iniciar a página Deverá ser possível remover items do carrinho ao clicar sobre eles mesmo após regarregar a página",
                   "timedOut": null,
-                  "duration": 831,
+                  "duration": 832,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -191,27 +191,27 @@
                   "context": null,
                   "code": "addToCart(29);\naddToCart(31);\naddToCart(15);\ncy.reload({\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\ncy.get(CART_ITEMS).children().eq(1).click();\ncountCart(2);\ncy.get(CART_ITEMS).children().eq(1).click();\ncountCart(1);\ncy.get(CART_ITEMS).children().eq(0).click();\ncountCart(0);",
                   "err": {},
-                  "uuid": "2be34dde-41f5-48f3-9862-ff4b40ecf47b",
-                  "parentUUID": "e2fbbdd9-95e9-4e6c-afd1-f9540e1a345b",
+                  "uuid": "46d3d9e8-b878-47b0-a86e-8bdcec005bfc",
+                  "parentUUID": "6ebbd1d8-eb9c-461f-9b4a-3aebf2e75994",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "0bc3b8e8-e660-4790-8d3b-1a3d57e4f523",
-                "2be34dde-41f5-48f3-9862-ff4b40ecf47b"
+                "2f23ce52-4620-4013-a4bc-6e1f9578871a",
+                "46d3d9e8-b878-47b0-a86e-8bdcec005bfc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3519,
+              "duration": 3598,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "679f8cbd-362a-423f-ba48-3706a37027f1",
+              "uuid": "c90843f3-f6fc-4768-ae6e-47c91a913c0e",
               "title": "5 - Some o valor total dos itens do carrinho de compras de forma assíncrona",
               "fullFile": "",
               "file": "",
@@ -222,7 +222,7 @@
                   "title": "Some o valor total dos itens do carrinho de compras de forma assíncrona",
                   "fullTitle": "Shopping Cart Project 5 - Some o valor total dos itens do carrinho de compras de forma assíncrona Some o valor total dos itens do carrinho de compras de forma assíncrona",
                   "timedOut": null,
-                  "duration": 6204,
+                  "duration": 6175,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -231,26 +231,26 @@
                   "context": null,
                   "code": "cy.visit(PROJECT_URL, {\n  onBeforeLoad: function onBeforeLoad(win) {\n    win.fetch = fetchMock;\n  }\n});\naddToCart(5);\ncheckPrice(results, [5]);\naddToCart(42);\ncheckPrice(results, [5, 42]);\naddToCart(36);\ncheckPrice(results, [5, 42, 36]);\naddToCart(15);\ncheckPrice(results, [5, 42, 36, 15]);\ncy.get(CART_ITEMS).children().eq(1).click();\ncheckPrice(results, [5, 36, 15]);",
                   "err": {},
-                  "uuid": "8d2a1515-02ad-4249-b31c-490e408b8efc",
-                  "parentUUID": "679f8cbd-362a-423f-ba48-3706a37027f1",
+                  "uuid": "d62f285c-0ad2-45f8-ae69-a17b39806d22",
+                  "parentUUID": "c90843f3-f6fc-4768-ae6e-47c91a913c0e",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "8d2a1515-02ad-4249-b31c-490e408b8efc"
+                "d62f285c-0ad2-45f8-ae69-a17b39806d22"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 6204,
+              "duration": 6175,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "1142fdaa-11ee-4227-8eb2-7c635c610c87",
+              "uuid": "e5d9afa1-6bac-46ea-924f-f8975f61f508",
               "title": "6 - Crie um botão para limpar carrinho de compras",
               "fullFile": "",
               "file": "",
@@ -261,7 +261,7 @@
                   "title": "Botão para limpar carrinho de compras",
                   "fullTitle": "Shopping Cart Project 6 - Crie um botão para limpar carrinho de compras Botão para limpar carrinho de compras",
                   "timedOut": null,
-                  "duration": 579,
+                  "duration": 594,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -270,26 +270,26 @@
                   "context": null,
                   "code": "addToCart(3);\naddToCart(0);\naddToCart(1);\ncountCart(3);\ncy.get(EMPTY_CART_BUTTON).click();\ncountCart(0);",
                   "err": {},
-                  "uuid": "9de47fae-7b7d-4e51-bd55-b618520f6bc5",
-                  "parentUUID": "1142fdaa-11ee-4227-8eb2-7c635c610c87",
+                  "uuid": "36194b08-2051-4fcb-81a3-bf9f24822883",
+                  "parentUUID": "e5d9afa1-6bac-46ea-924f-f8975f61f508",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "9de47fae-7b7d-4e51-bd55-b618520f6bc5"
+                "36194b08-2051-4fcb-81a3-bf9f24822883"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 579,
+              "duration": 594,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
             },
             {
-              "uuid": "c6ae9544-a7d1-48a4-9bf1-b46254158b4e",
+              "uuid": "a6832a91-4a06-45c4-aee2-388016fa4c7f",
               "title": "7 - Adicione um texto de `loading` durante uma requisição à API",
               "fullFile": "",
               "file": "",
@@ -300,7 +300,7 @@
                   "title": "Adicionar um texto de \"loading\" durante uma requisição à API",
                   "fullTitle": "Shopping Cart Project 7 - Adicione um texto de `loading` durante uma requisição à API Adicionar um texto de \"loading\" durante uma requisição à API",
                   "timedOut": null,
-                  "duration": 3151,
+                  "duration": 3146,
                   "state": "passed",
                   "speed": "slow",
                   "pass": true,
@@ -309,20 +309,20 @@
                   "context": null,
                   "code": "cy.visit(PROJECT_URL);\ncy.get(LOADING).should('exist').wait(3000).should('not.exist');",
                   "err": {},
-                  "uuid": "f47dc064-7441-4e91-937a-9e849ef92b4c",
-                  "parentUUID": "c6ae9544-a7d1-48a4-9bf1-b46254158b4e",
+                  "uuid": "d4f76a18-175d-43f7-9ab0-baba082e83dc",
+                  "parentUUID": "a6832a91-4a06-45c4-aee2-388016fa4c7f",
                   "isHook": false,
                   "skipped": false
                 }
               ],
               "suites": [],
               "passes": [
-                "f47dc064-7441-4e91-937a-9e849ef92b4c"
+                "d4f76a18-175d-43f7-9ab0-baba082e83dc"
               ],
               "failures": [],
               "pending": [],
               "skipped": [],
-              "duration": 3151,
+              "duration": 3146,
               "root": false,
               "rootEmpty": false,
               "_timeout": 2000
