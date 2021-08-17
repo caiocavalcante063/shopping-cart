@@ -102,6 +102,8 @@
   border-style: none;
   width: 250px;
   box-shadow: 1px 1px 1px #888888;
+  margin-bottom: 15px;
+  font-size: 0.8em;
 }
 
 .cart__item {
