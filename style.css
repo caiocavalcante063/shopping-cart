@@ -98,6 +98,7 @@
   height: 27px;
   border-style: none;
   box-shadow: 1px 1px 1px #888888;
+  padding-left: 10px;
 }
 
 .empty-cart {
