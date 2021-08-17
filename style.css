@@ -46,6 +46,7 @@
 
 .item .item__add {
   background-color: #3787ff;
+  border: 0px;
   border-radius: 4%;
   cursor: pointer;
   margin: 0;
@@ -53,7 +54,8 @@
 }
 
 .item__add:hover, .empty-cart:hover{
-  box-shadow: 2px 2px 2px 0px #888888;
+  box-shadow: 2px 2px #888888;
+  border-radius: 4%;
 }
 
 .cart {
